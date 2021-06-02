@@ -1,0 +1,35 @@
+.comentario{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin: 5rem 0;
+    column-gap: 1rem;
+    row-gap: 5rem;
+    overflow: hidden;
+    .comentario__cuadricula{
+        display: flex;
+        align-items: center;
+        height: 35rem;
+        &:nth-child(odd){
+            // background-color: #e6e6e6;
+        }
+        .textComentario{
+            padding: 0 2rem;
+        }
+        .redondo{
+            flex-basis: 30%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .r-izq{
+            transform: translateX(-100%);
+            transition: 1s;
+        }
+        .r-der{
+            transform: translateX(100%);
+            transition: 1s;
+        }
+
+        }
+    }

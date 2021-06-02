@@ -1,0 +1,107 @@
+.cabecera{
+    position: relative;
+    height: 25rem;
+    .cabecera__foto{
+        background-image: url(../img/facebook-2429746_640.png);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 25rem;
+        overflow: hidden;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-attachment: fixed; 
+        position: relative;
+      } 
+      .tituloCabecera{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+}
+.proyectos{
+  img{
+    width: 100%;
+  }
+  .proyectos__contenido{
+    margin: $separacion auto;
+    width: 90%;
+  }
+}
+
+@media (min-width:720px) {
+  .proyectos{
+    .sectionImg{
+      display: flex;
+      flex-wrap: wrap;
+      div{
+        flex-basis:50%;
+        overflow: hidden;
+      }
+      .imgCol{
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 3s ease;
+        &:hover{
+          transform: scale(1.10,1.10);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:900px) {
+  .proyectos{
+    .proyectos__row{
+      display: flex;
+      align-items: center;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(226,222,222,1) 99%);
+      .proyectos__contenido{
+        width: 30%;
+      }
+      .sectionImg{
+        flex-basis:0 0 65%;
+        max-width: 65%;
+        min-height: 70vh;
+      }
+      
+      .imgCol{
+        object-fit: cover;
+        transition: all 1s ease;
+      }
+    }
+    .blanco{
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.video{
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+/* Boton para todas las secciones */
+.boton {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #f2f2f2;
+  transition: 0.2s;
+  background-color: #000;
+  padding: 1.5rem 3rem;
+  border: 1px solid;
+  display: inline-block;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  &:hover{
+    background-color: #fff;
+    border:1px solid #000;
+    color: #000;
+  }
+}
