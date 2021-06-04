@@ -72,3 +72,62 @@
         grid-column: 1/2;
     }
 }
+@media (max-width:1200px) {
+    .grid{
+        width: 100%;
+        border: none;
+    }
+}
+@media (max-width:900px) {
+    .bloque{
+        grid-template-columns: 0.7fr 1fr;
+        .bloque__foto{
+            img:hover{
+                transform: none;
+            }
+        }
+    }
+    .bloque__foto, .bloque__descripcion{
+        grid-row: 2/3;
+    }
+    .uno{
+        grid-template-columns: 1fr 0.7fr;
+        .descripcion--reverse{
+            grid-column: 2/3;
+        }
+        .bloque__foto{
+            grid-column: 1/2;
+        }
+    }
+    .tres{
+        grid-template-columns: 1fr 0.7fr;
+        align-items: center;
+        .descripcion--reverse{
+            grid-column: 2/3;
+        }
+        .bloque__foto{
+            grid-column: 1/2;
+        }
+    }
+   
+    
+}
+@media (max-width:720px) {
+    .tituloP{
+        top: 70%;
+        .tituloP__principal{
+            font-size: 3rem;
+        }
+    }
+    .bloque{
+        display: block;
+        border-bottom: 1px solid #e1e1e1;
+        &:last-child{
+            border: none;
+        }
+        h3{
+            padding: 1rem 0;
+            
+        }
+    }
+}

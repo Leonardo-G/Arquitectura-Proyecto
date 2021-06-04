@@ -1,7 +1,8 @@
 footer{
     background-color: #101010;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
+    
     p{
         font-size:1.6rem;
         margin: 0;
@@ -48,36 +49,36 @@ footer{
          text-align: center;
      }
 }
-
+@media (min-width:720px) {
+    .pie__mapaSitio{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem ;
+        .col-p1, .col-p2{
+            padding: 0 2rem;
+        }
+}
+}
 @media (min-width:900px) {
     .pie{
-    display: flex;
-    justify-content: space-around;
-        .pie__mapaSitio{
-            flex-basis:50%;
-            width: 50%;
-            }
-        
-        // .pie__comentario{
-        //     flex-basis: 0 0 50%;
-        //     width: 50%;
-        // }
-        .pie__red{
-            flex-basis: 0 0 50%;
-            height: 100%;
-            margin-top: auto;
-            margin-bottom: auto;
-            .facebook, .instagram, .twitter, .pinterest{
+        display: flex;
+        justify-content: space-around;
+        }
+    .pie__red{
+        flex-basis: 0 0 50%;
+        height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        .facebook, .instagram, .twitter, .pinterest{
+        transition: 0.5s;
+        margin: 0 3rem;
+            &:hover{
+                transform: scale(1.25,1.25);
                 transition: 0.5s;
-                margin: 0 3rem;
-                &:hover{
-                    transform: scale(1.25,1.25);
-                    transition: 0.5s;
-                }
             }
         }
-    }   
-}
+    }
+}   
   
   
   

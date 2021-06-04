@@ -99,7 +99,8 @@ h2 {
     font-size: 2rem;
     padding: 1rem 1.5rem;
     display: block;
-    position: relative; }
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.493); }
     .lista .enlace:hover {
       background-color: rgba(0, 0, 0, 0.25);
       color: #f2cd5e;
@@ -170,7 +171,9 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 20vh; } }
+    height: 20vh; }
+  .lista .enlace {
+    background-color: transparent; } }
 
 .nosotros {
   margin: 7.5rem auto;
@@ -442,7 +445,7 @@ h2 {
 footer {
   background-color: #101010;
   width: 100%;
-  padding: 2rem 2rem; }
+  padding: 3rem 2rem; }
   footer p {
     font-size: 1.6rem;
     margin: 0; }
@@ -479,24 +482,29 @@ footer {
 .pie .derechos {
   text-align: center; }
 
+@media (min-width: 720px) {
+  .pie__mapaSitio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem; }
+    .pie__mapaSitio .col-p1, .pie__mapaSitio .col-p2 {
+      padding: 0 2rem; } }
+
 @media (min-width: 900px) {
   .pie {
     display: flex;
     justify-content: space-around; }
-    .pie .pie__mapaSitio {
-      flex-basis: 50%;
-      width: 50%; }
-    .pie .pie__red {
-      flex-basis: 0 0 50%;
-      height: 100%;
-      margin-top: auto;
-      margin-bottom: auto; }
-      .pie .pie__red .facebook, .pie .pie__red .instagram, .pie .pie__red .twitter, .pie .pie__red .pinterest {
-        transition: 0.5s;
-        margin: 0 3rem; }
-        .pie .pie__red .facebook:hover, .pie .pie__red .instagram:hover, .pie .pie__red .twitter:hover, .pie .pie__red .pinterest:hover {
-          transform: scale(1.25, 1.25);
-          transition: 0.5s; } }
+  .pie__red {
+    flex-basis: 0 0 50%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto; }
+    .pie__red .facebook, .pie__red .instagram, .pie__red .twitter, .pie__red .pinterest {
+      transition: 0.5s;
+      margin: 0 3rem; }
+      .pie__red .facebook:hover, .pie__red .instagram:hover, .pie__red .twitter:hover, .pie__red .pinterest:hover {
+        transform: scale(1.25, 1.25);
+        transition: 0.5s; } }
 
 .headerProyect {
   height: 85vh;
@@ -562,3 +570,42 @@ footer {
   margin-top: 10%; }
   .dos .descripcion--reverse {
     grid-column: 1/2; }
+
+@media (max-width: 1200px) {
+  .grid {
+    width: 100%;
+    border: none; } }
+
+@media (max-width: 900px) {
+  .bloque {
+    grid-template-columns: 0.7fr 1fr; }
+    .bloque .bloque__foto img:hover {
+      transform: none; }
+  .bloque__foto, .bloque__descripcion {
+    grid-row: 2/3; }
+  .uno {
+    grid-template-columns: 1fr 0.7fr; }
+    .uno .descripcion--reverse {
+      grid-column: 2/3; }
+    .uno .bloque__foto {
+      grid-column: 1/2; }
+  .tres {
+    grid-template-columns: 1fr 0.7fr;
+    align-items: center; }
+    .tres .descripcion--reverse {
+      grid-column: 2/3; }
+    .tres .bloque__foto {
+      grid-column: 1/2; } }
+
+@media (max-width: 720px) {
+  .tituloP {
+    top: 70%; }
+    .tituloP .tituloP__principal {
+      font-size: 3rem; }
+  .bloque {
+    display: block;
+    border-bottom: 1px solid #e1e1e1; }
+    .bloque:last-child {
+      border: none; }
+    .bloque h3 {
+      padding: 1rem 0; } }
