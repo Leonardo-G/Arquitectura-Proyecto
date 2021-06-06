@@ -17,13 +17,15 @@ footer{
 }
 
 .pie{
+    h4{
+        color: #fff;
+        font-size:2rem;
+    }
     .pie__mapaSitio {
         h4, a{
             display: block;
         }
         h4{
-            color: #fff;
-            font-size:2rem;
             margin: 2rem 0;
         }
         a{
@@ -36,9 +38,33 @@ footer{
             }
         }
     }
+    .pie__subscripcion{
+        margin: 4rem auto;
+        width: 90%;
+        h4{
+            text-align: left;
+        }
+        p{
+            color: #fff;
+            text-align: left;
+        }
+        input{
+            width: 100%;
+            padding: 0.5rem 1rem ;
+            font-size: 1.6rem;
+            color: #fff;
+            background-color: transparent;
+            border:transparent;
+            border-bottom: 1px solid #fff;
+            margin-top: 2rem;
+            &:focus{
+                border: 1px solid #fff;
+            }
+        }
+    }
      .pie__red{
         display: flex;
-       flex-wrap: wrap;
+        flex-wrap: wrap;
         flex: column;
         justify-content: center;
         img{
@@ -63,9 +89,10 @@ footer{
     .pie{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         }
     .pie__red{
-        flex-basis: 0 0 50%;
+        flex-basis: 0 0 47%;
         height: 100%;
         margin-top: auto;
         margin-bottom: auto;
@@ -78,7 +105,21 @@ footer{
             }
         }
     }
+    .pie__subscripcion{
+        flex-basis: 47%;
+        width: 40%;
+    }
 }   
+@media (min-width:1200px) {
+    .pie__red{
+        flex-basis:0 0 30%;
+    }
+    .pie__subscripcion{
+        flex-basis: 30%;
+        width: 100%;
+    }
+    
+}
   
   
   

@@ -59,6 +59,7 @@ h2 {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  background-position: center center;
   filter: brightness(70%); }
 
 .cabezado .navegacion {
@@ -255,7 +256,8 @@ h2 {
     .servicios .servicios__arq img {
       border-radius: 50%;
       background-color: #f2cd5e;
-      padding: 1rem; }
+      padding: 1rem;
+      width: 10rem; }
 
 @media (min-width: 720px) {
   .servicios {
@@ -281,7 +283,7 @@ h2 {
   position: relative;
   height: 25rem; }
   .cabecera .cabecera__foto {
-    background-image: url(../img/cabeceraProyectos.jpg);
+    background-image: url(../img/pexels-pixabay-262367.jpg);
     position: absolute;
     top: 0;
     width: 100%;
@@ -509,12 +511,14 @@ footer {
   footer .derechos {
     margin-top: 5rem; }
 
+.pie h4 {
+  color: #fff;
+  font-size: 2rem; }
+
 .pie .pie__mapaSitio h4, .pie .pie__mapaSitio a {
   display: block; }
 
 .pie .pie__mapaSitio h4 {
-  color: #fff;
-  font-size: 2rem;
   margin: 2rem 0; }
 
 .pie .pie__mapaSitio a {
@@ -524,6 +528,26 @@ footer {
   .pie .pie__mapaSitio a:hover {
     text-decoration: line-through;
     color: #f2cd5e; }
+
+.pie .pie__subscripcion {
+  margin: 4rem auto;
+  width: 90%; }
+  .pie .pie__subscripcion h4 {
+    text-align: left; }
+  .pie .pie__subscripcion p {
+    color: #fff;
+    text-align: left; }
+  .pie .pie__subscripcion input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid #fff;
+    margin-top: 2rem; }
+    .pie .pie__subscripcion input:focus {
+      border: 1px solid #fff; }
 
 .pie .pie__red {
   display: flex;
@@ -547,9 +571,10 @@ footer {
 @media (min-width: 900px) {
   .pie {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    flex-wrap: wrap; }
   .pie__red {
-    flex-basis: 0 0 50%;
+    flex-basis: 0 0 47%;
     height: 100%;
     margin-top: auto;
     margin-bottom: auto; }
@@ -558,7 +583,17 @@ footer {
       margin: 0 3rem; }
       .pie__red .facebook:hover, .pie__red .instagram:hover, .pie__red .twitter:hover, .pie__red .pinterest:hover {
         transform: scale(1.25, 1.25);
-        transition: 0.5s; } }
+        transition: 0.5s; }
+  .pie__subscripcion {
+    flex-basis: 47%;
+    width: 40%; } }
+
+@media (min-width: 1200px) {
+  .pie__red {
+    flex-basis: 0 0 30%; }
+  .pie__subscripcion {
+    flex-basis: 30%;
+    width: 100%; } }
 
 .headerProyect {
   height: 85vh;
