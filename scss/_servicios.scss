@@ -1,40 +1,42 @@
 .servicios{
-    margin: $separacion auto ;
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: $separacion;
     .servicios__arq{
-        margin-top: $separacion;
+        padding: 5rem;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         align-items: center;
-        img{
-            border-radius: 50%;
-            background-color: #f2cd5e;
-            padding: 1rem;
-            width: 10rem;
+        &:nth-child(odd){
+            background-color: rgba(230, 230, 230,.45);
+        } 
+        &:hover{
+            background-color: rgba(230, 230, 230,.7);
         }
+    }
+    img{
+        width: 8rem;
     }
 }
 @media (min-width:720px) {
     .servicios{
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5rem;
         .servicios__arq{
-            flex-basis: 45%;
+            flex-basis: 50%;
         }
     }
 }
-@media (min-width:900px) {
+@media (min-width:920px) {
     .servicios{
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 3rem;
-        width: 80%;
-        max-width: 1400px ;
         .servicios__arq{
-            flex-basis: 31%;
+            flex-basis: 33%;
+            padding: 9rem 5rem;
         }
     }
 }

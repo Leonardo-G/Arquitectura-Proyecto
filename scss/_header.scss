@@ -13,6 +13,9 @@
     filter: brightness(70%);
 }
 .cabezado{
+    .carousel-indicators .active{
+        background-color: #f2cd5e;
+    }
     .navegacion{
         padding-top: $separacion;
         padding-left: auto;
@@ -135,8 +138,7 @@
 }
 .cabezado .navbar-nav .nav-link.active{
     color: #f2cd5e; 
-  }
-  
+}
 @media (min-width:768px) {
     .titulo{
         .titulo__principal{

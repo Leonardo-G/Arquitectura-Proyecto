@@ -48,6 +48,21 @@ footer{
             color: #fff;
             text-align: left;
         }
+        .group-subs{
+            position: relative;
+            button{
+                background-color: transparent;
+                border: none;
+                padding: 0 2rem;
+            }
+            .button-img{
+                width:2rem;
+                position: absolute;
+                top: 50%;
+                right: 5%;
+                transform: translateY(-50%);
+            }
+        }
         input{
             width: 100%;
             padding: 0.5rem 1rem ;

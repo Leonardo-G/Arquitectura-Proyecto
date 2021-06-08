@@ -367,6 +367,9 @@ h2 {
   background-position: center center;
   filter: brightness(70%); }
 
+.cabezado .carousel-indicators .active {
+  background-color: #f2cd5e; }
+
 .cabezado .navegacion {
   padding-top: 5rem;
   padding-left: auto;
@@ -553,38 +556,38 @@ h2 {
         width: 100%; } }
 
 .servicios {
-  margin: 5rem auto;
-  width: 90%; }
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem; }
   .servicios .servicios__arq {
-    margin-top: 5rem;
+    padding: 5rem;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .servicios .servicios__arq img {
-      border-radius: 50%;
-      background-color: #f2cd5e;
-      padding: 1rem;
-      width: 10rem; }
+    .servicios .servicios__arq:nth-child(odd) {
+      background-color: rgba(230, 230, 230, 0.45); }
+    .servicios .servicios__arq:hover {
+      background-color: rgba(230, 230, 230, 0.7); }
+  .servicios img {
+    width: 8rem; }
 
 @media (min-width: 720px) {
   .servicios {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 5rem; }
+    justify-content: center; }
     .servicios .servicios__arq {
-      flex-basis: 45%; } }
+      flex-basis: 50%; } }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   .servicios {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    width: 80%;
-    max-width: 1400px; }
+    justify-content: center; }
     .servicios .servicios__arq {
-      flex-basis: 31%; } }
+      flex-basis: 33%;
+      padding: 9rem 5rem; } }
 
 .cabecera {
   position: relative;
@@ -847,6 +850,18 @@ footer {
   .pie .pie__subscripcion p {
     color: #fff;
     text-align: left; }
+  .pie .pie__subscripcion .group-subs {
+    position: relative; }
+    .pie .pie__subscripcion .group-subs button {
+      background-color: transparent;
+      border: none;
+      padding: 0 2rem; }
+    .pie .pie__subscripcion .group-subs .button-img {
+      width: 2rem;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%); }
   .pie .pie__subscripcion input {
     width: 100%;
     padding: 0.5rem 1rem;
