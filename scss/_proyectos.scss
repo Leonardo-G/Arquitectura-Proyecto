@@ -83,10 +83,106 @@
   }
 }
 
+//Estilos a la sección de videos.
 .video{
   width: 100%;
   min-height: 100vh;
   object-fit: cover;
+  filter: brightness(90%);
+}
+
+.seccionVideo{
+  position: relative;
+  .top-opaco{
+    background-color: transparent;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0.3) 5%, rgba(255, 255, 255, 0) 90%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: 99;
+  }
+  .bottom-opaco{
+    background-color: transparent;
+    background: linear-gradient(0deg, rgba(14, 14, 14, 0.3) 5%, rgba(255, 255, 255, 0) 90%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: 99;
+  }
+  .contador{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(1,1fr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 80%;
+    transform: translate(-50%, 50%);
+  }
+  .contador__info{
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0 auto;
+    z-index: 1000;
+    padding: 2rem;
+    
+      &:last-child{
+        border-bottom: none;
+      }
+      p{
+        font-size: 2rem;
+        color: $amarillo;
+        font-weight: 700;
+        margin: 0rem;
+      }
+      h3{
+        color: #fff;
+        font-size: 2rem;
+      }
+  }
+}
+@media (min-width:720px) {
+  .seccionVideo{
+    .contador{
+      grid-template-columns: repeat(2,1fr);
+      width: 80%;
+      height: auto;
+    }
+    .contador__info{
+      padding: 2rem;
+      &:last-child{
+        border-bottom: 1px solid #fff;
+      } 
+    }
+  }
+}
+@media (min-width:993px) {
+  .seccionVideo{
+    .contador{
+      grid-template-columns: repeat(4,1fr);
+      width: 80%;
+      transform: translate(-50%, 100%);
+      transition: all 0.7s ease;
+      .contador__info{
+        border-right: 1px solid #e1e1e1;
+        border-bottom: none;
+        width: 100%;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      p{
+        font-size: 3rem;
+      }
+      h3{
+        font-size: 3rem;
+      }
+    }
+  }
 }
 
 /* Boton para todas las secciones */
