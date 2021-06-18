@@ -1,10 +1,11 @@
+//Inicio de Seccion Sobre Nosotros
 .nosotros{
     margin: $separacion*1.5 auto;
     padding-bottom: 9rem;
     .nosotros__info{
         width: 80% ;
         margin: $separacion*2 auto;
-        border-right: 2px solid #f2cd5e;
+        border-right: 2px solid $amarillo;
         height: 40rem;
     }
     .img1, .img2{

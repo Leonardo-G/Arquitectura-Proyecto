@@ -6,8 +6,7 @@ window.addEventListener("scroll",function(){
         flecha.style.opacity = "1"
     }else{
         flecha.style.opacity = "0"
-    }
-
+    } 
     //video
     const video = document.querySelector("#video");
     const videoAparacion = video.getBoundingClientRect().top;
@@ -15,3 +14,5 @@ window.addEventListener("scroll",function(){
         video.style.transform = "translate(-50%,-50%)";
     }
 })
+
+

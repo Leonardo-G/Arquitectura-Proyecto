@@ -2,7 +2,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     width: 80%;
     position: absolute;
-    top: 5rem;
+    top: $separacion;
   }
 .header{
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 }
 .cabezado{
     .carousel-indicators .active{
-        background-color: #f2cd5e;
+        background-color: $amarillo;
     }
     .navegacion{
         padding-top: $separacion;
@@ -34,57 +34,36 @@
         }
         .logoWeb__texto{
             font-size: 2.5rem;
-            color: #fff;
+            color: $bla;
             margin: 0;
             display: inline;
           }
         .logoWeb__letra{
             font-size: 4.5rem;
-            color: #f2cd5e;
+            color: $amarillo;
             font-weight: bold;
         }
         .fondoBT{
-            background-color: #f2cd5e;
+            background-color: $amarillo;
             width: 5rem;
             height: 3rem;
         }
     }
 } 
-.flecha{
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-name: fmove;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    a{
-        padding: 2rem 1rem;
-    }
-    .flecha__img{
-        width: 3rem;
-    }
-}
-
-@keyframes fmove{
-    0% { top:60%;}
-    50% { top:65%;}
-    100% { top:70%;}
-}
 .lista{
     z-index: 10;
     .enlace{
         color: #f2f2f2;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding: 1rem 1.5rem;
         display: block;
         position: relative;
         background-color: rgba(0, 0, 0, 0.493);
         &:hover {
             background-color: rgba(0,0,0, 0.25);
-            color:#f2cd5e;
+            color:$amarillo;
             transition: 0.2s;
         }
         &:after{           
@@ -120,15 +99,15 @@
     margin: 0 $separacion ;
     position: absolute;
     bottom: 0;
-    border-top: 1px solid #f2cd5e;
+    border-top: 1px solid $amarillo;
     .titulo__principal{
         font-size: 2.5rem;
         text-transform: uppercase;
-        color:#fff;
+        color:$bla;
     }
     .titulo__info{
         font-size: 2rem;
-        color: #f2cd5e;
+        color: $amarillo;
         font-weight: 700;
         text-align: left;
     }
@@ -137,7 +116,15 @@
     text-align: center;
 }
 .cabezado .navbar-nav .nav-link.active{
-    color: #f2cd5e; 
+    color: $amarillo; 
+}
+//Para dispositivos mas grandes
+@media (min-width:380px){
+    .lista{
+        .enlace{
+            font-size: 2rem;
+        }
+    }
 }
 @media (min-width:768px) {
     .titulo{
@@ -147,14 +134,14 @@
         .titulo__info{
             font-size: 2.4rem;
         }
-  }
+    }
 }
 @media (min-width:900px) {
     .titulo{
         .titulo__principal{
             font-size: 4.5rem;
             text-transform: uppercase;
-            color:#fff
+            color:$bla
         }
         .titulo__info{
             font-size: 3rem;
@@ -184,7 +171,7 @@
     }
 } 
 
-//Flecha para ir al inicio
+//Flecha para ir al inicio, cuando se desplaza hacia abajo
 .campoInicio{
     background-color: $amarillo;
     height: 8rem;
@@ -204,9 +191,7 @@
     .flechaArriba{
         width: 5rem;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include centrado
     }
 }
 @media (max-width:720px) {

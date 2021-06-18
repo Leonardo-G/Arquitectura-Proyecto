@@ -17,10 +17,6 @@ h2,h3,h4,h5 {
   color: #262626;
   font-size: 3rem;
 }
-h6{
-  font-size: 2rem;
-  text-align: center;
-}
 a{
   text-decoration: none;
 }
@@ -37,8 +33,16 @@ p{
 $separacion: 5rem;
 
 $bla: #fff;
+$gris: #e1e1e1;
 $neg: #000;
 $amarillo : #f2cd5e;
+
+// Mixins
+@mixin centrado{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 //Condicional
 h1{

@@ -1,3 +1,4 @@
+//Inicio de la seccion de Servicios
 .servicios{
     display: flex;
     flex-direction: column;
@@ -36,7 +37,7 @@
         justify-content: center;
         .servicios__arq{
             flex-basis: 33%;
-            padding: 9rem 5rem;
+            padding: 9rem $separacion;
         }
     }
 }

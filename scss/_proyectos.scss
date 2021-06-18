@@ -1,3 +1,4 @@
+//Inicio de Estilos para la seccion de Proyectos
 .cabecera{
     position: relative;
     height: 25rem;
@@ -16,9 +17,7 @@
       } 
       .tituloCabecera{
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include centrado
       }
 }
 .proyectos{
@@ -83,7 +82,7 @@
   }
 }
 
-//Estilos a la sección de videos.
+//Inicio de Estilos a la sección de video con su contenido.
 .video{
   width: 100%;
   min-height: 100vh;
@@ -107,7 +106,7 @@
     background-color: transparent;
     background: linear-gradient(0deg, rgba(14, 14, 14, 0.3) 5%, rgba(255, 255, 255, 0) 90%);
     position: absolute;
-    bottom: 0;
+    bottom: 0.5rem;
     left: 0;
     width: 100%;
     height: 20vh;
@@ -118,18 +117,15 @@
     align-items: center;
     grid-template-columns: repeat(1,1fr);
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 80%;
-    transform: translate(-50%, 50%);
+    @include centrado
   }
   .contador__info{
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid $gris;
     margin: 0 auto;
     z-index: 1000;
     padding: 2rem;
-    
       &:last-child{
         border-bottom: none;
       }
@@ -140,7 +136,7 @@
         margin: 0rem;
       }
       h3{
-        color: #fff;
+        color: $bla;
         font-size: 2rem;
       }
   }
@@ -155,7 +151,7 @@
     .contador__info{
       padding: 2rem;
       &:last-child{
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $bla;
       } 
     }
   }
@@ -168,7 +164,7 @@
       transform: translate(-50%, 100%);
       transition: all 0.7s ease;
       .contador__info{
-        border-right: 1px solid #e1e1e1;
+        border-right: 1px solid $gris;
         border-bottom: none;
         width: 100%;
         &:last-child{
@@ -191,7 +187,7 @@
   text-decoration: none;
   color: #f2f2f2;
   transition: 0.2s;
-  background-color: #000;
+  background-color: $neg;
   padding: 1.5rem 3rem;
   border: 1px solid;
   display: inline-block;
@@ -201,8 +197,8 @@
   text-transform: uppercase;
   font-weight: 700;
   &:hover{
-    background-color: #fff;
-    border:1px solid #000;
-    color: #000;
+    background-color: $bla;
+    border:1px solid $neg;
+    color: $neg;
   }
 }
